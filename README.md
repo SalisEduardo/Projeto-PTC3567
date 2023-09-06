@@ -1,0 +1,1 @@
+Projeto de Pesquisa realizado para a disciplina PTC3567 - Ciência dos Dados em Automação e Engenharia do curso de  Engenharia Elétrica na POLI-USP (2o. Semestre de 2023)
