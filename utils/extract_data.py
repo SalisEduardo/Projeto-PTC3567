@@ -17,7 +17,7 @@ DEFAULT_SERIES  = ["USREC", # US Recession
 
 
 
-def get_FRED_series(series_codes = DEFAULT_SERIES ,APIKEY = "3350621adf83e98b7ae0cf60ee5098a1",return_info=True):
+def get_FRED_series(series_codes = DEFAULT_SERIES ,APIKEY = API_FRED,return_info=True):
     
 
     fred = Fred(api_key=APIKEY)
