@@ -2,6 +2,8 @@
 import pandas as pd 
 from fredapi import Fred
 
+from utils.key import APIKEY
+
 
 DEFAULT_SERIES  = ["USREC", # US Recession
             "GDPC1", "PIECTR", "PRS85006013", "IPB50001SQ", "CQRMTSPL", # Macro
@@ -70,6 +72,6 @@ def get_data_dictionary(tickers_dataset,infos_dataset,possible_targets = ['USREC
         # Add the key-value pair to the JSON dictionary
         infos_dictionary[key] = row_data
 
-        return(infos_dictionary)
+    return(infos_dictionary)
     
 #def get_tickers_frequency():
