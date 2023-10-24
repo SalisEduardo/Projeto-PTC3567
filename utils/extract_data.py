@@ -2,7 +2,7 @@
 import pandas as pd 
 from fredapi import Fred
 
-from utils.key import APIKEY
+from utils.key import APIKEY as API_FRED
 
 
 DEFAULT_SERIES  = ["USREC", # US Recession
