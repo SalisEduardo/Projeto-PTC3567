@@ -1,0 +1,135 @@
+tcode,fred,description,group
+5,RPI,Real Personal Income,Output and Income
+5,W875RX1,Real personal income ex transfer receipts,Output and Income
+5,INDPRO,IP Index,Output and Income
+5,IPFPNSS,IP : Final Products and Nonindustrial Supplies,Output and Income
+5,IPFINAL,IP : Final Products ( Market Group ),Output and Income
+5,IPCONGD,IP : Consumer Goods,Output and Income
+5,IPDCONGD,IP : Durable Consumer Goods,Output and Income
+5,IPNCONGD,IP : Nondurable Consumer Goods,Output and Income
+5,IPBUSEQ,IP : Business Equipment,Output and Income
+5,IPMAT,IP : Materials,Output and Income
+5,IPDMAT,IP : Durable Materials,Output and Income
+5,IPNMAT,IP : Nondurable Materials,Output and Income
+5,IPMANSICS,IP : Manufacturing ( SIC ),Output and Income
+5,IPB51222s,IP : Residential Utilities,Output and Income
+5,IPFUELS,IP : Fuels,Output and Income
+1,NAPMPI,ISM Manufacturing : Production Index,Output and Income
+2,CUMFNS,Capacity Utilization : Manufacturing,Output and Income
+2,HWI,Help - Wanted Index for United States,Labor Market
+2,HWIURATIO,Ratio of Help Wanted / No . Unemployed,Labor Market
+5,CLF16OV,Civilian Labor Force,Labor Market
+5,CE16OV,Civilian Employment,Labor Market
+2,UNRATE,Civilian Unemployment Rate,Labor Market
+2,UEMPMEAN,Average Duration of Unemployment ( Weeks ),Labor Market
+5,UEMPLT5,Civilians Unemployed - Less Than 5 Weeks,Labor Market
+5,UEMP5TO14,Civilians Unemployed for 5-14 Weeks,Labor Market
+5,UEMP15OV,Civilians Unemployed - 15 Weeks & Over,Labor Market
+5,UEMP15T26,Civilians Unemployed for 15-26 Weeks,Labor Market
+5,UEMP27OV,Civilians Unemployed for 27 Weeks and Over,Labor Market
+5,CLAIMSX,Initial Claims,Labor Market
+5,PAYEMS,All Employees : Total nonfarm,Labor Market
+5,USGOOD,All Employees : Goods - Producing Industries,Labor Market
+5,CES1021000001,All Employees : Mining and Logging : Mining,Labor Market
+5,USCONS,All Employees : Construction,Labor Market
+5,MANEMP,All Employees : Manufacturing,Labor Market
+5,DMANEMP,All Employees : Durable goods,Labor Market
+5,NDMANEMP,All Employees : Nondurable goods,Labor Market
+5,SRVPRD,All Employees : Service - Providing Industries,Labor Market
+5,USTPU,"All Employees : Trade , Transportation & Utilities",Labor Market
+5,USWTRADE,All Employees : Wholesale Trade,Labor Market
+5,USTRADE,All Employees : Retail Trade,Labor Market
+5,USFIRE,All Employees : Financial Activities,Labor Market
+5,USGOVT,All Employees : Government,Labor Market
+1,CES0600000007,Avg Weekly Hours : Goods - Producing,Labor Market
+2,AWOTMAN,Avg Weekly Overtime Hours : Manufacturing,Labor Market
+1,AWHMAN,Avg Weekly Hours Manufacturing,Labor Market
+1,NAPMEI,ISM Manufacturing : Employment Index,Labor Market
+6,CES0600000008,Avg Hourly Earnings : Goods - Producing,Labor Market
+6,CES2000000008,Avg Hourly Earnings : Construction,Labor Market
+6,CES3000000008,Avg Hourly Earnings Manufacturing,Labor Market
+4,HOUST,Housing Starts : Total New Privately Owned,Consumption and Orders
+4,HOUSTNE,"Housing Starts , Northeast",Consumption and Orders
+4,HOUSTMW,"Housing Starts , Midwest",Consumption and Orders
+4,HOUSTS,"Housing Starts , South",Consumption and Orders
+4,HOUSTW,"Housing Starts , West",Consumption and Orders
+4,PERMIT,New Private Housing Permits ( SAAR ),Consumption and Orders
+4,PERMITNE,"New Private Housing Permits , Northeast ( SAAR )",Consumption and Orders
+4,PERMITMW,"New Private Housing Permits , Midwest ( SAAR )",Consumption and Orders
+4,PERMITS,"New Private Housing Permits , South ( SAAR )",Consumption and Orders
+4,PERMITW,"New Private Housing Permits , West ( SAAR )",Consumption and Orders
+5,DPCERA3M086SBEA,Real personal consumption expenditures,ORders and Inventories
+5,CMRMTSPLx,Real Manu . and Trade Industries Sales,ORders and Inventories
+5,RETAILX,Retail and Food Services Sales,ORders and Inventories
+1,NAPM,ISM PMI Composite Index,ORders and Inventories
+1,NAPMNOI,ISM New Orders Index,ORders and Inventories
+1,NAPMSDI,ISM Supplier Deliveries Index :,ORders and Inventories
+1,NAPMII,ISM Inventories Index,ORders and Inventories
+5,ACOGNO,New Orders for Consumer Goods,ORders and Inventories
+5,AMDMNOx,New Orders for Durable Goods,ORders and Inventories
+5,ANDENOX,New Orders for Nondefense Capital Goods,ORders and Inventories
+5,AMDMUOX,Unfilled Orders for Durable Goods,ORders and Inventories
+5,BUSINVX,Total Business Inventories,ORders and Inventories
+2,ISRATIOX,Total Business : Inventories to Sales Ratio,ORders and Inventories
+2,UMCSENTx,Consumer Sentiment Index,ORders and Inventories
+6,MISL,M1 Money Stock,Money and Credit
+6,M2SL,M2 Money Stock,Money and Credit
+5,M2REAL,Real M2 Money Stock,Money and Credit
+6,AMBSL,St. Louis Adjusted Monetary Base,Money and Credit
+6,TOTRESNS,Total Reserves of Depository Institutions,Money and Credit
+7,NONBORRES,Reserves Of Depository Institutions,Money and Credit
+6,BUSLOANS,Commercial and Industrial Loans,Money and Credit
+6,REALLN,Real Estate Loans at All Commercial Banks,Money and Credit
+6,NONREVSL,Total Nonrevolving Credit,Money and Credit
+2,CONSPI,Nonrevolving consumer credit to Personal Income,Money and Credit
+6,MZMSL,MZM Money Stock,Money and Credit
+6,DTCOLNVHFNM,Consumer Motor Vehicle Loans Outstanding,Money and Credit
+6,DTCTHFNM,Total Consumer Loans and Leases Outstanding,Money and Credit
+6,INVEST,Securities in Bank Credit at All Commercial Banks,Money and Credit
+2,FEDFUNDS,Effective Federal Funds Rate,Interest rate and Exchange Rates
+2,CP3Mx,3 - Month AA Financial Commercial Paper Rate,Interest rate and Exchange Rates
+2,TB3MS,3 - Month Treasury Bill :,Interest rate and Exchange Rates
+2,TB6MS,6 - Month Treasury Bill :,Interest rate and Exchange Rates
+2,GS1,1 - Year Treasury Rate,Interest rate and Exchange Rates
+2,GS5,5 - Year Treasury Rate,Interest rate and Exchange Rates
+2,GS10,10 - Year Treasury Rate,Interest rate and Exchange Rates
+2,AAA,Moody's Seasoned Aaa Corporate Bond Yield,Interest rate and Exchange Rates
+2,BAA,Moody's Seasoned Baa Corporate Bond Yield,Interest rate and Exchange Rates
+1,COMPAPFFx,3 - Month Commercial Paper Minus FEDFUNDS,Interest rate and Exchange Rates
+1,TB3SMFFM,3 - Month Treasury C Minus FEDFUNDS,Interest rate and Exchange Rates
+1,TB6SMFFM,6 - Month Treasury C Minus FEDFUNDS,Interest rate and Exchange Rates
+1,T1YFFM,1 - Year Treasury C Minus FEDFUNDS,Interest rate and Exchange Rates
+1,T5YFFM,5 - Year Treasury C Minus FEDFUNDS,Interest rate and Exchange Rates
+1,T10YFFM,10 - Year Treasury C Minus FEDFUNDS,Interest rate and Exchange Rates
+1,AAAFFM,Moody's Aaa Corporate Bond Minus FEDFUNDS,Interest rate and Exchange Rates
+1,BAAFFM,Moody's Baa Corporate Bond Minus FEDFUNDS,Interest rate and Exchange Rates
+5,TWEXMMTH,Trade Weighted U.S. Dollar Index : Major Currencies,Interest rate and Exchange Rates
+5,EXSZUSX,Switzerland / U.S. Foreign Exchange Rate,Interest rate and Exchange Rates
+5,EXJPUSX,Japan U.S. Foreign Exchange Rate,Interest rate and Exchange Rates
+5,EXUSUKX,U.S.U.K. Foreign Exchange Rate,Interest rate and Exchange Rates
+5,EXCAUSX,Canada / U.S. Foreign Exchange Rate,Interest rate and Exchange Rates
+6,PPIFGS,PPI : Finished Goods,Prices
+6,PPIFCG,PPI : Finished Consumer Goods,Prices
+6,PPIITM,PPI : Intermediate Materials,Prices
+6,PPICRM,PPI : Crude Materials,Prices
+6,OILPRICEx,"Crude Oil , spliced WTI and Cushing",Prices
+6,PPICMM,PPI : Metals and metal products :,Prices
+1,NAPMPRI,ISM Manufacturing : Prices Index,Prices
+6,CPIAUCSL,CPI All Items,Prices
+6,CPIAPPSL,CPI : Apparel,Prices
+6,CPITRNSL,CPI Transportation,Prices
+6,CPIMEDSL,CPI Medical Care,Prices
+6,CUSR0000SAC,CPI Commodities,Prices
+6,CUUR0000SAD,CPI Durables,Prices
+6,CUSR0000SAS,CPI Services,Prices
+6,CPIULFSL,CPI : All Items Less Food,Prices
+6,CUUR0000SA0L2,CPI All items less shelter :,Prices
+6,CUSR0000SAOL5,CPI All items less medical care,Prices
+6,PCEPI,Personal Cons . Expend .: Chain Index,Prices
+6,DDURRG3M086SBEA,Personal Cons . Exp : Durable goods,Prices
+6,DNDGRG3M086SBEA,Personal Cons . Exp : Nondurable goods,Prices
+6,DSERRG3M086SBEA,Personal Cons . Exp : Services,Prices
+5,S & P 500,S & P's Common Stock Price Index : Composite,Stock Market
+5,S & P : indust,S & P's Common Stock Price Index : Industrials,Stock Market
+2,S & P div yield,S & P's Composite Common Stock : Dividend Yield,Stock Market
+5,S & P PE ratio,S & P's Composite Common Stock : Price - Earnings Ratio,Stock Market

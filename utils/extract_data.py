@@ -6,12 +6,51 @@ from utils.key import APIKEY as API_FRED
 
 
 DEFAULT_SERIES  = ["USREC", # US Recession
-            "GDPC1", "PIECTR", "PRS85006013", "IPB50001SQ", "CQRMTSPL", # Macro
-            "T10Y3M", "T10Y2Y", ## Term Spreads
-            "BAMLH0A0HYM2", "BAA10Y", "AAAFF",  ## Corporate spreads
+                   
+            # Macro       
+            "GDPC1", "PIECTR", "PRS85006013", "IPB50001SQ", "CQRMTSPL","UMCSEN",
+            
+            # Spreads
+
+            "T10Y3M", "T10Y2Y",'T10YFFM', "BAMLH0A0HYM2", "BAA10Y", 
+            "AAAFF" , 'BAA10YM','AAA10YM' ,'BAAFFM','AAAFFM', "BAA10Y",
+            "T5YFFM", "T1YFFM", "T10Y2YM","T10Y2Y","T10Y3MM","T6MFFM",
+            "T3MFFM","T6MFF",
+
+            # Financial conditions
+            "NFCI","NFCILEVERAGE","NFCICREDIT",
+            
+            
             "T10YIE", "T5YIE", ## Inflation spreads
-            "VIXCLS", "GVZCLS","OVXCLS", # Volatility Index
-            "ATLSBUSRGEP","ATLSBUEGEP",# Business Expectations
+
+            # Equity Market Volatility Index
+            "INFECTDISEMVTRACKD",
+            'EMVOVERALLEMV',"EMVMACROBUS",
+            "EMVEXRATES",
+            "EMVMACROINTEREST",
+            "EMVCOMMMKT",
+            
+
+            # High Yield
+
+            'BAMLHYH0A0HYM2TRIV',
+
+            # Credit
+            'TOTALSL',
+            'RCCCBBALTOT',
+            "RELACBW027SBOG",
+
+            # OIL
+            "DCOILWTICO",
+
+            # Real State
+            "CSUSHPINSA",
+
+            # 'VIX' kind indexes
+            "VIXCLS", "GVZCLS","OVXCLS", 
+
+            # Business Surveys
+            "ATLSBUSRGEP","ATLSBUEGEP",
             "ATLSBUSRGUP","ATLSBUEGUP",# Business Uncertainty
             ]
 
