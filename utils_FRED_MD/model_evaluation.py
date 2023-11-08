@@ -79,10 +79,6 @@ def get_metrics_table(model,y_true,X_true,model_name,probs=None,predictions=None
     return df
 
 
-
-
-
-
 def  display_metrics(train_metrics_report,test_metrics_report,not_show=['Confussion Matrix','Classification Report','False Positive Ratio','True Positive Ratio','Thresholds']):
     for k in train_metrics_report.keys():
         if k not in not_show:
@@ -103,4 +99,7 @@ def plot_classification_metrics(model,y_true,X_true):
     ConfusionMatrixDisplay(confusion_matrix = conf_matrix).plot(ax=ax1)
 
     plt.close()
+
+
+#def model_implementation(df,train_size):
 
