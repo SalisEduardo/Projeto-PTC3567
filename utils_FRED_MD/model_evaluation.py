@@ -100,6 +100,14 @@ def display_metrics(train_metrics_report, test_metrics_report, not_show=['Confus
             print(k, " - Test : ", round(test_metrics_report[k], 4))
             print("-" * 100)
 
+
+def create_folder_if_not_exists(folder_path):
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+        print(f"Folder created at: {folder_path}")
+    else:
+        print(f"Folder already exists at: {folder_path}")
+
 def plot_classification_metrics(model, y_true, X_true, save_path='img/classification_metrics/', model_name=None):
     if model_name is None:
         model_name = get_model_name(model)
@@ -122,7 +130,8 @@ def plot_classification_metrics(model, y_true, X_true, save_path='img/classifica
     
     
     # Save the entire figure as a PDF
-    # os.makedirs(os.path.dirname(save_path), exist_ok=True)
+    #os.makedirs(os.path.dirname(save_path), exist_ok=True)
+    create_folder_if_not_exists("img/classification_metrics/")
     # plt.savefig(save_path, bbox_inches='tight', format='pdf')
 
     # Close the figure after saving
