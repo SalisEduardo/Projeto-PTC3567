@@ -26,11 +26,38 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 
+from sklearn.dummy import DummyClassifier
+
 import utils_FRED_MD.model_evaluation  as me
 SPLIT = 0.7
 SEED=42
 mms = MinMaxScaler()
 scaler = StandardScaler()
+
+
+MODEL_SET_V1 =   [
+            ('LR', LogisticRegression(class_weight='balanced'), {'C': [0.001, 0.01, 0.1, 1, 5,10,8,30,50, 100, 1000],'penalty': ['elasticnet', 'l1', 'l2'],"solver":['saga',"lblinear"]}),
+            ('LDA', LinearDiscriminantAnalysis(), {'solver': ['svd', 'lsqr', 'eigen'], 'shrinkage': [None, 'auto', 0.1, 0.5, 0.9]}),
+            ('KNN', KNeighborsClassifier(), {'n_neighbors': [2,4,10,15,25,50,100]}),
+            ('CART', DecisionTreeClassifier(), {'criterion': ['gini', 'entropy'], 'splitter': ['best', 'random'], 'max_depth': [None, 10, 20, 30, 50], 'min_samples_split': [2, 5, 10], 'min_samples_leaf': [1, 2, 4]}),
+            ('NB', GaussianNB(), {'var_smoothing': [1e-9, 1e-8, 1e-7, 1e-6, 1e-5]}),
+            ('SVM', SVC(), [{'C':[0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0],
+                                'kernel': ['linear']},
+                                {'C': [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0],
+                                'gamma': [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0],
+                                'kernel': ['rbf']}]
+                            ),
+            ("RandomForest",RandomForestClassifier(),{'n_estimators': [10, 50, 100, 200, 500], 'criterion': ['gini', 'entropy'], 'max_depth': [None, 10, 20, 30], 'min_samples_split': [2, 5, 10], 'min_samples_leaf': [1, 2, 4]}),
+            ("MLP_Classifier",MLPClassifier(),{'hidden_layer_sizes': [(100,), (50, 100, 50),(100,100),(100,200,200,100), (50,)],'activation': ['relu', 'tanh', 'logistic'],'solver': ['adam', 'sgd'],'alpha': [0.0001, 0.05],'learning_rate': ['constant', 'adaptive'],})
+        ]
+
+MODEL_SET_V2 =   [
+            ('LR', LogisticRegression(class_weight='balanced'), {'C': [0.001, 0.01, 0.1, 1, 5,10,8,30,50, 100, 1000],'penalty': ['elasticnet', 'l1', 'l2'],"solver":['saga',"lblinear"]}),
+            ('KNN', KNeighborsClassifier(), {'n_neighbors': [2,4,10,15,25,50,100]}),
+            ('CART', DecisionTreeClassifier(), {'criterion': ['gini', 'entropy'], 'splitter': ['best', 'random'], 'max_depth': [None, 10, 20, 30, 50], 'min_samples_split': [2, 5, 10], 'min_samples_leaf': [1, 2, 4]}),
+            
+            ("MLP_Classifier",MLPClassifier(),{'hidden_layer_sizes': [(100,), (50, 100, 50),(100,100),(100,200,200,100), (50,)],'activation': ['relu', 'tanh', 'logistic'],'solver': ['adam', 'sgd'],'alpha': [0.0001, 0.05],'learning_rate': ['constant', 'adaptive'],})
+        ]
 
 
 
@@ -55,21 +82,8 @@ def evaluate_models(X, y, models_and_params=None, scoring='accuracy', cross_val 
     
 
     if models_and_params is None:
-        models_and_params = [
-            ('LR', LogisticRegression(class_weight='balanced'), {'C': [0.001, 0.01, 0.1, 1, 5,10,8,30,50, 100, 1000],'penalty': ['elasticnet', 'l1', 'l2'],"solver":['saga',"lblinear"]}),
-            ('LDA', LinearDiscriminantAnalysis(), {'solver': ['svd', 'lsqr', 'eigen'], 'shrinkage': [None, 'auto', 0.1, 0.5, 0.9]}),
-            ('KNN', KNeighborsClassifier(), {'n_neighbors': [2,4,10,15,50,100,int(np.sqrt(len(y)))]}),
-            ('CART', DecisionTreeClassifier(), {'criterion': ['gini', 'entropy'], 'splitter': ['best', 'random'], 'max_depth': [None, 10, 20, 30, 50], 'min_samples_split': [2, 5, 10], 'min_samples_leaf': [1, 2, 4]}),
-            ('NB', GaussianNB(), {'var_smoothing': [1e-9, 1e-8, 1e-7, 1e-6, 1e-5]}),
-            ('SVM', SVC(), [{'C':[0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0],
-                                'kernel': ['linear']},
-                                {'C': [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0],
-                                'gamma': [0.0001, 0.001, 0.01, 0.1, 1.0, 10.0, 100.0, 1000.0],
-                                'kernel': ['rbf']}]
-                            ),
-            ("RandomForest",RandomForestClassifier(),{'n_estimators': [10, 50, 100, 200, 500], 'criterion': ['gini', 'entropy'], 'max_depth': [None, 10, 20, 30], 'min_samples_split': [2, 5, 10], 'min_samples_leaf': [1, 2, 4]}),
-            ("MLP_Classifier",MLPClassifier(),{'hidden_layer_sizes': [(100,), (50, 100, 50),(100,100),(100,200,200,100), (50,)],'activation': ['relu', 'tanh', 'logistic'],'solver': ['adam', 'sgd'],'alpha': [0.0001, 0.05],'learning_rate': ['constant', 'adaptive'],})
-        ]
+        models_and_params = MODEL_SET_V2
+
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=split, random_state=seed, stratify=y)
     if preprocessing is None == False:
